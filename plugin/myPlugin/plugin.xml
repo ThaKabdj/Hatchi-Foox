@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="myPlugin" name="Add Field to Index"
+    version="1.0.0" provider-name="your name">
+ 
+   <runtime>
+     <library name="myPlugin.jar">
+       <export name="*"/>
+     </library>
+   </runtime>
+ 
+   <extension id="org.apache.nutch.indexer.myPlugin"
+       name="Add Field to Index"
+       point="org.apache.nutch.indexer.IndexingFilter">
+     <implementation id="myPlugin"
+         class="org.apache.nutch.indexer.AddField"/>
+   </extension>
+</plugin>
